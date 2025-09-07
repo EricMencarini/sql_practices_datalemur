@@ -1,4 +1,4 @@
-https://datalemur.com/questions/odd-even-measurements
+--https://datalemur.com/questions/odd-even-measurements
 
 WITH ranked_measurements AS (
   SELECT 

@@ -1,4 +1,4 @@
-https://datalemur.com/questions/sql-second-highest-salary
+--https://datalemur.com/questions/sql-second-highest-salary
 
 WITH salary_rank AS
 (

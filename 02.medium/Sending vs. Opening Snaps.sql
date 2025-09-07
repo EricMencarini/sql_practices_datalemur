@@ -1,4 +1,4 @@
-https://datalemur.com/questions/time-spent-snaps
+--https://datalemur.com/questions/time-spent-snaps
 
 WITH activity_sending AS
 (

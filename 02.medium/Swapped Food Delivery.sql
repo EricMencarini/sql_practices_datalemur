@@ -1,4 +1,4 @@
-https://datalemur.com/questions/sql-swapped-food-delivery
+--https://datalemur.com/questions/sql-swapped-food-delivery
 
 WITH c_order AS (
     SELECT order_id, 

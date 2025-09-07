@@ -1,4 +1,4 @@
-https://datalemur.com/questions/supercloud-customer
+--https://datalemur.com/questions/supercloud-customer
 
 WITH supercloud_cust AS (
   SELECT 

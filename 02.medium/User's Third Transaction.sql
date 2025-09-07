@@ -1,4 +1,4 @@
-https://datalemur.com/questions/sql-third-transaction
+--https://datalemur.com/questions/sql-third-transaction
 
 WITH Rank_Transactions AS
 (

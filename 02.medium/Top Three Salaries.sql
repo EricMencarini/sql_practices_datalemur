@@ -1,4 +1,4 @@
-https://datalemur.com/questions/sql-top-three-salaries
+--https://datalemur.com/questions/sql-top-three-salaries
 
 WITH employee_salary as (
 SELECT

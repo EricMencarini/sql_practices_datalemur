@@ -1,4 +1,4 @@
-https://datalemur.com/questions/sql-highest-grossing
+--https://datalemur.com/questions/sql-highest-grossing
 
 WITH ranked_spend AS (
     SELECT 

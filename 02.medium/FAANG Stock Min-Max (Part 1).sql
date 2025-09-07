@@ -1,4 +1,4 @@
-https://datalemur.com/questions/sql-bloomberg-stock-min-max-1
+--https://datalemur.com/questions/sql-bloomberg-stock-min-max-1
 
 WITH extremes AS (
     SELECT 
