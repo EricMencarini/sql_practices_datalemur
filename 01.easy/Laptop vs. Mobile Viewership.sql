@@ -1,6 +1,6 @@
 --https://datalemur.com/questions/laptop-mobile-viewership
 
-Solution 1:
+--Solution 1:
 SELECT
    SUM(CASE 
           WHEN device_type = 'laptop' 
@@ -13,7 +13,7 @@ SELECT
    FROM viewership
 
 
-Solution 2:
+--Solution 2:
 WITH laptop AS
 (
   SELECT count(view_time) as contagem
