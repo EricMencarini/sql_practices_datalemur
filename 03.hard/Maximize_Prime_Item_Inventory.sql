@@ -1,4 +1,3 @@
 --https://datalemur.com/questions/prime-warehouse-storage
 
---Bad writing on the explanation of the problem.
---Not usefull to practice.
+--Unfortunately, this questions is not properly written. So I'm going to wait until is corrected.

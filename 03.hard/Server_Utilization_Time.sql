@@ -1,5 +1,25 @@
 --https://datalemur.com/questions/total-utilization-time
 
+/*
+Amazon Web Services (AWS) is powered by fleets of servers. Senior management has requested data-driven solutions to optimize server usage.
+
+Write a query that calculates the total time that the fleet of servers was running. The output should be in units of full days.
+
+Assumptions:
+
+Each server might start and stop several times.
+The total time in which the server fleet is running can be calculated as the sum of each server's uptime.
+
+Example Output:
+total_uptime_days
+21
+Explanation
+In the example output, the combined uptime of all the servers (from each start time to stop time) totals 21 full days.
+
+The dataset you are querying against may have different input & output - this is just an example!
+
+*/
+
 WITH get_days_diff AS
 (
 SELECT
