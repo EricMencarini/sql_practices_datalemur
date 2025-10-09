@@ -7,6 +7,9 @@ This repository contains a collection of SQL exercises and solutions, focused on
 - **01.easy/**  
   Contains beginner-level SQL problems and solutions. Each file addresses a specific question, often sourced from platforms like DataLemur, and demonstrates clear, efficient ways to solve them.
 
+  **02.medium/**  
+  Contains medium SQL challenges, starting with complex aggregations, window functions, and analytical queries relevant to real-world data engineering scenarios.
+
 - **03.hard/**  
   Contains more advanced SQL challenges, including complex aggregations, window functions, and analytical queries relevant to real-world data engineering scenarios.
 
