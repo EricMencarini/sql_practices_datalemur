@@ -2,14 +2,14 @@
 
 /*
 This is the same question as problem #1 in the SQL Chapter of Ace the Data Science Interview!
+Assume you have an events table on Facebook app analytics. 
 
-Assume you have an events table on Facebook app analytics. Write a query to calculate the click-through rate 
+Write a query to calculate the click-through rate 
 (CTR) for the app in 2022 and round the results to 2 decimal places.
 
 Definition and note:
 Percentage of click-through rate (CTR) = 100.0 * Number of clicks / Number of impressions
 To avoid integer division, multiply the CTR by 100.0, not 100.
-
 
 Explanation
 Let's consider an example of App 123. This app has a click-through rate (CTR) of 50.00% because out of the 2 impressions it received, it got 1 click.
@@ -21,7 +21,7 @@ The dataset you are querying against may have different input & output - this is
 */
 
 --Solution:
-WITH ctr as (
+WITH ctr AS (
 SELECT 
     app_id,
     COUNT(CASE WHEN event_type = 'impression' THEN 1 END) AS quantity_impression,

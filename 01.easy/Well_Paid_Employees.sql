@@ -17,8 +17,10 @@ The dataset you are querying against may have different input & output - this is
 
 SELECT e.employee_id,
        e.name
-FROM employee e 
+FROM 
+  employee e 
   JOIN employee ee 
     ON e.manager_id = ee.employee_id 
-WHERE e.salary > ee.salary
+WHERE 
+  e.salary > ee.salary
   

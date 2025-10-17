@@ -21,7 +21,8 @@ The dataset you are querying against may have different input & output - this is
 */
 
 SELECT user_id
-FROM emails e 
+FROM 
+  emails e 
   INNER JOIN texts t 
     ON e.email_id = t.email_id
 WHERE 1=1

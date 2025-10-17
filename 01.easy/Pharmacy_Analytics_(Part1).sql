@@ -21,6 +21,8 @@ The dataset you are querying against may have different input & output - this is
 
 SELECT drug,
        (total_sales - cogs) AS Total_Profit
-FROM pharmacy_sales
-ORDER BY Total_Profit DESC
+FROM 
+    pharmacy_sales
+ORDER BY 
+    Total_Profit DESC
 LIMIT 3

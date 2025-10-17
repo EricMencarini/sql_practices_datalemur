@@ -19,7 +19,10 @@ The dataset you are querying against may have different input & output - this is
 */
 
 SELECT card_name,
-       max(issued_amount) - min(issued_amount) AS difference
-FROM monthly_cards_issued
-GROUP BY card_name
-ORDER BY difference DESC
+       MAX(issued_amount) - MIN(issued_amount) AS difference
+FROM 
+    monthly_cards_issued
+GROUP BY 
+    card_name
+ORDER BY 
+    difference DESC

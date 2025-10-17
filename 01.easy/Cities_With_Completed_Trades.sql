@@ -21,11 +21,13 @@ The dataset you are querying against may have different input & output - this is
 
 SELECT DISTINCT 
         u.city, 
-        COUNT(order_id) as total_orders
-
-FROM trades t 
-JOIN users u on t.user_id = u.user_id
+        COUNT(order_id) AS total_orders
+FROM 
+  trades t 
+JOIN users u ON t.user_id = u.user_id
   WHERE status = 'Completed'
-GROUP BY u.city
-ORDER BY total_orders DESC
+GROUP BY 
+  u.city
+ORDER BY 
+  total_orders DESC
 LIMIT 3

@@ -19,8 +19,13 @@ to learn SQL! After you strengthen your SQL foundations, I'm sure you'll be more
 
 */
 
-SELECT candidate_id
-FROM candidates
-WHERE skill in ('Python', 'Tableau','PostgreSQL')
-GROUP BY candidate_id
-HAVING count(candidate_id) > 2
+SELECT 
+    candidate_id
+FROM 
+    candidates
+WHERE 
+    skill IN ('Python', 'Tableau','PostgreSQL')
+GROUP BY 
+    candidate_id
+HAVING 
+    COUNT(candidate_id) > 2

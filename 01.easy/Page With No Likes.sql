@@ -18,6 +18,8 @@ p.s. If you have literally no idea how to solve this, maybe give our free SQL tu
 
 SELECT p.page_id
 FROM pages p 
-LEFT OUTER JOIN page_likes pp ON p.page_id = pp.page_id 
-WHERE pp.page_id is NULL
-ORDER BY p.page_id ASC
+    LEFT OUTER JOIN page_likes pp ON p.page_id = pp.page_id 
+WHERE 
+    pp.page_id IS NULL
+ORDER BY 
+    p.page_id ASC

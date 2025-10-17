@@ -34,15 +34,16 @@ SELECT
 --Solution 2:
 WITH laptop AS
 (
-  SELECT count(view_time) as contagem
+  SELECT COUNT(view_time) AS contagem
   FROM viewership
   WHERE device_type = 'laptop'
 ),
 mobile AS
 (
-  SELECT count(view_time) as contagem
-  FROM viewership
-  WHERE device_type in ('tablet','phone')
+  SELECT COUNT(view_time) AS contagem
+  FROM 
+    viewership
+  WHERE device_type IN ('tablet','phone')
 )
-SELECT (SELECT * FROM laptop) as laptop_views,
-       (SELECT * FROM mobile) as mobile_views
+SELECT (SELECT * FROM laptop) AS laptop_views,
+       (SELECT * FROM mobile) AS mobile_views
