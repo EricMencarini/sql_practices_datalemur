@@ -1,6 +1,6 @@
---https://datalemur.com/questions/second-day-confirmation
-
 /*
+https://datalemur.com/questions/second-day-confirmation
+
 Assume you're given tables with information about TikTok user sign-ups and confirmations through email and text. 
 New users on TikTok sign up using their email addresses, and upon sign-up, each user receives a text message confirmation to activate their account.
 
@@ -17,7 +17,6 @@ Explanation:
 Only User 1052 confirmed their sign-up on the second day.
 
 The dataset you are querying against may have different input & output - this is just an example!
-
 */
 
 SELECT user_id

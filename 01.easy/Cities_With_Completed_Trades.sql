@@ -1,6 +1,6 @@
---https://datalemur.com/questions/completed-trades
-
 /*
+https://datalemur.com/questions/completed-trades
+
 This is the same question as problem #2 in the SQL Chapter of Ace the Data Science Interview!
 
 Assume you're given the tables containing completed trade orders and user details in a Robinhood trading system.
@@ -16,7 +16,6 @@ Denver	1
 In the given dataset, San Francisco has the highest number of completed trade orders with 3 orders. Boston holds the second position with 2 orders, and Denver ranks third with 1 order.
 
 The dataset you are querying against may have different input & output - this is just an example!
-
 */
 
 SELECT DISTINCT 

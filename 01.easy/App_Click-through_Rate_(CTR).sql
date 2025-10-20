@@ -1,6 +1,6 @@
---https://datalemur.com/questions/click-through-rate
-
 /*
+https://datalemur.com/questions/click-through-rate
+
 This is the same question as problem #1 in the SQL Chapter of Ace the Data Science Interview!
 Assume you have an events table on Facebook app analytics. 
 
@@ -20,15 +20,17 @@ In this case, 1 divided by 2 equals 0.5, and when multiplied by 100.0, it become
 The dataset you are querying against may have different input & output - this is just an example!
 */
 
---Solution:
 WITH ctr AS (
 SELECT 
     app_id,
     COUNT(CASE WHEN event_type = 'impression' THEN 1 END) AS quantity_impression,
     COUNT(CASE WHEN event_type = 'click'      THEN 1 END) AS quantity_clicks
-FROM events
-WHERE EXTRACT(YEAR FROM timestamp) = '2022' 
-GROUP BY app_id
+FROM 
+    events
+WHERE 
+    EXTRACT(YEAR FROM TIMESTAMP) = '2022' 
+GROUP BY 
+    app_id
 )
 
 SELECT app_id,

@@ -1,6 +1,6 @@
+/*
 --https://datalemur.com/questions/final-account-balance
 
-/*
 Given a table containing information about bank deposits and withdrawals made using Paypal, write a query to retrieve the final account balance 
 for each account, taking into account all the transactions recorded in the table with the assumption that there are no missing transactions.
 

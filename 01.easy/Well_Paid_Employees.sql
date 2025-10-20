@@ -1,6 +1,6 @@
---https://datalemur.com/questions/sql-well-paid-employees
-
 /*
+https://datalemur.com/questions/sql-well-paid-employees
+
 Companies often perform salary analyses to ensure fair compensation practices. 
 One useful analysis is to check if there are any employees earning more than their direct managers.
 

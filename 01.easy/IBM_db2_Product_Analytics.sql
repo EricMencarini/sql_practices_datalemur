@@ -1,6 +1,6 @@
---https://datalemur.com/questions/sql-ibm-db2-product-analytics
-
 /*
+https://datalemur.com/questions/sql-ibm-db2-product-analytics
+
 This is the same question as problem #6 in the SQL Chapter of Ace the Data Science Interview!
 
 Assume you're given a table Twitter tweet data, write a query to obtain a histogram of tweets posted per user in 2022. 
@@ -17,7 +17,6 @@ Based on the example output, there are two users who posted only one tweet in 20
 The query groups the users by the number of tweets they posted and displays the number of users in each group.
 
 The dataset you are querying against may have different input & output - this is just an example!
-
 */
 
 WITH qty_queries AS (

@@ -1,6 +1,6 @@
---https://datalemur.com/questions/sql-page-with-no-likes
-
 /*
+https://datalemur.com/questions/sql-page-with-no-likes
+
 Assume you're given two tables containing data about Facebook Pages and their respective likes (as in "Like a Facebook Page").
 
 Write a query to return the IDs of the Facebook pages that have zero likes. The output should be sorted in ascending order based on the page IDs.
@@ -13,7 +13,6 @@ page_id
 The dataset you are querying against may have different input & output - this is just an example!
 
 p.s. If you have literally no idea how to solve this, maybe give our free SQL tutorial a try first?
-
 */
 
 SELECT p.page_id

@@ -1,6 +1,6 @@
---https://datalemur.com/questions/matching-skills
-
 /*
+https://datalemur.com/questions/matching-skills
+
 Given a table of candidates and their skills, you're tasked with finding the candidates best suited for an open Data Science job. 
 You want to find candidates who are proficient in Python, Tableau, and PostgreSQL.
 
@@ -16,7 +16,6 @@ The dataset you are querying against may have different input & output - this is
 p.s. give the hints below a try if you're stuck and don't know where to start!
 p.p.s if you find this problem too tricky, even after the hints, check out my 30-day SQL learning roadmap, which features my favorite free resources 
 to learn SQL! After you strengthen your SQL foundations, I'm sure you'll be more than ready to tackle this question!
-
 */
 
 SELECT 

@@ -1,6 +1,6 @@
---https://datalemur.com/questions/non-profitable-drugs
-
 /*
+https://datalemur.com/questions/non-profitable-drugs
+
 CVS Health is analyzing its pharmacy sales data, and how well different products are selling in the market. 
 Each drug is exclusively manufactured by a single manufacturer.
 
@@ -17,8 +17,8 @@ The first three rows indicate that some drugs resulted in losses. Among these, B
 followed by AbbVie and Eli Lilly. However, the Medi-Chord drug manufactured by Biogen reported a profit and was excluded from the result.
 
 The dataset you are querying against may have different input & output - this is just an example!
-
 */
+
 SELECT 
   manufacturer,
   COUNT(product_id) AS drug_count,
