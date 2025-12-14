@@ -20,12 +20,18 @@ WITH ranked_spend AS (
         product, 
         SUM(spend) AS total_spend,
         RANK() OVER (PARTITION BY category ORDER BY SUM(spend) DESC) AS rank
-    FROM product_spend
-    WHERE EXTRACT(YEAR FROM transaction_date) = 2022
-    GROUP BY category, product
+    FROM 
+        product_spend
+    WHERE 
+        EXTRACT(YEAR FROM transaction_date) = 2022
+    GROUP BY 
+        category, product
 )
-SELECT  category, 
-        product, 
-        total_spend
-FROM ranked_spend
-WHERE rank < 3;
+SELECT  
+    category, 
+    product, 
+    total_spend
+FROM 
+    ranked_spend
+WHERE 
+    rank < 3;

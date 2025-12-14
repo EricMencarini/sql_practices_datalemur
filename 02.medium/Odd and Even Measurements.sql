@@ -40,5 +40,7 @@ SELECT
   measurement_day, 
   SUM(measurement_value) FILTER (WHERE measurement_num % 2 != 0) AS odd_sum, 
   SUM(measurement_value) FILTER (WHERE measurement_num % 2 = 0) AS even_sum 
-FROM ranked_measurements
-GROUP BY measurement_day;
+FROM 
+  ranked_measurements
+GROUP BY 
+  measurement_day;

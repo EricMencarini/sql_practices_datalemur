@@ -25,7 +25,6 @@ FROM
   monthly_cards_issued
 )
 
-
 SELECT 
   card_name,
   issued_amount
@@ -34,4 +33,4 @@ FROM
 WHERE 
   card_rank = 1
 ORDER BY
-  issued_amount DESC
+  issued_amount DESC;

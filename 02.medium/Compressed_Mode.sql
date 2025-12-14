@@ -25,7 +25,7 @@ WITH rank_items AS
 SELECT 
   item_count,
   order_occurrences,
-  DENSE_RANK() OVER(ORDER BY order_occurrences DESC) AS rank_i
+  DENSE_RANK() OVER(ORDER BY order_occurrences DESC) AS dense_rank_i
 FROM 
   items_per_order
 )
@@ -35,4 +35,4 @@ SELECT
 FROM 
   rank_items
 WHERE
-  rank_i = 1
+  dense_rank_i = 1;

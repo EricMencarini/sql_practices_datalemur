@@ -31,7 +31,7 @@ FROM
 SELECT 
   transaction_date,
   user_id, 
-  COUNT(product_id) AS 	purchase_count
+  COUNT(product_id) AS purchase_count
 FROM 
   order_purchase
 WHERE 
@@ -39,4 +39,4 @@ WHERE
 GROUP BY 
   user_id, transaction_date
 ORDER BY 
-  transaction_date ASC
+  transaction_date ASC;
