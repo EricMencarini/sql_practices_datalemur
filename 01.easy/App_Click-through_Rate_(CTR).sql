@@ -20,7 +20,7 @@ In this case, 1 divided by 2 equals 0.5, and when multiplied by 100.0, it become
 The dataset you are querying against may have different input & output - this is just an example!
 */
 
-WITH ctr AS (
+WITH calc_clicks_impressions AS (
 SELECT 
     app_id,
     COUNT(CASE WHEN event_type = 'impression' THEN 1 END) AS quantity_impression,
@@ -33,6 +33,8 @@ GROUP BY
     app_id
 )
 
-SELECT app_id,
-        ROUND(((100.0 * quantity_clicks) / quantity_impression),2)  AS ctr
-FROM ctr
+SELECT 
+    app_id,
+    ROUND(((100.0 * quantity_clicks) / quantity_impression),2)  AS ctr
+FROM 
+    calc_clicks_impressions;

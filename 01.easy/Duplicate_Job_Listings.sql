@@ -29,4 +29,5 @@ HAVING
 
 SELECT 
     COUNT(*) AS duplicate_companies 
-FROM count_companies
+FROM 
+    count_companies;

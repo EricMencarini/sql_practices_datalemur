@@ -18,9 +18,10 @@ The dataset you are querying against may have different input & output - this is
 */
 
 
-WITH tweet_msg AS
+WITH tweet_msg_filter AS
 (
-SELECT user_id,
+SELECT 
+  user_id,
   COUNT(tweet_id) AS tweet_bucket
 FROM
   tweets
@@ -28,11 +29,14 @@ WHERE
   EXTRACT(YEAR FROM tweet_date) = 2022
 GROUP BY 
   user_id
-ORDER BY tweet_bucket ASC
+ORDER BY 
+  tweet_bucket ASC
 )
 
 SELECT 
   tweet_bucket,
   COUNT(user_id) AS users_num
-FROM tweet_msg
-GROUP BY tweet_bucket
+FROM 
+  tweet_msg_filter
+GROUP BY 
+  tweet_bucket;

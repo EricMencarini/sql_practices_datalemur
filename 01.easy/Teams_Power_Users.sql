@@ -11,9 +11,11 @@ No two users have sent the same number of messages in August 2022.
 
 WITH top_users AS
 (
-SELECT sender_id, 
-       COUNT(*) AS message_count
-FROM messages
+SELECT 
+  sender_id, 
+  COUNT(*) AS message_count
+FROM 
+  messages
   WHERE 1=1 
     AND EXTRACT(YEAR from sent_date) = '2022'
     AND   EXTRACT(MONTH from sent_date) = '08'
@@ -24,5 +26,6 @@ ORDER BY
 )
 
 SELECT * 
-FROM top_users
+FROM 
+  top_users
 LIMIT 2

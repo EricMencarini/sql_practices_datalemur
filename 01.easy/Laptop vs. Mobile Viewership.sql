@@ -19,30 +19,32 @@ The dataset you are querying against may have different input & output - this is
 */
 
 SELECT
-   SUM(CASE 
-          WHEN device_type = 'laptop' 
-      THEN 1 
-      ELSE 0 END) AS laptop_views,
-      
-   SUM(CASE 
-        WHEN device_type IN ('tablet', 'phone') 
-      THEN 1 ELSE 0 END) AS mobile_views
-   FROM viewership
+   SUM(CASE WHEN device_type = 'laptop' THEN 1 ELSE 0 END) AS laptop_views,
+   SUM(CASE WHEN device_type IN ('tablet', 'phone') THEN 1 ELSE 0 END) AS mobile_views
+
+FROM 
+   viewership;
 
 
 --Solution 2:
 WITH laptop AS
 (
-  SELECT COUNT(view_time) AS contagem
-  FROM viewership
-  WHERE device_type = 'laptop'
+  SELECT 
+    COUNT(view_time) AS contagem
+  FROM 
+    viewership
+  WHERE 
+    device_type = 'laptop'
 ),
 mobile AS
 (
-  SELECT COUNT(view_time) AS contagem
+  SELECT 
+    COUNT(view_time) AS contagem
   FROM 
     viewership
-  WHERE device_type IN ('tablet','phone')
+  WHERE 
+    device_type IN ('tablet','phone')
 )
-SELECT (SELECT * FROM laptop) AS laptop_views,
-       (SELECT * FROM mobile) AS mobile_views
+SELECT
+ (SELECT * FROM laptop) AS laptop_views,
+ (SELECT * FROM mobile) AS mobile_views;

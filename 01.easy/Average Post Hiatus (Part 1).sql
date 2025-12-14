@@ -8,8 +8,9 @@ Output the user and number of the days between each user's first and last post.
 p.s. If you've read the Ace the Data Science Interview and liked it, consider writing us a review
 */
 
-SELECT user_id,
-       (CAST(MAX(post_date) AS date) - CAST(MIN(post_date) AS date)) AS days_between
+SELECT 
+    user_id,
+    (CAST(MAX(post_date) AS date) - CAST(MIN(post_date) AS date)) AS days_between
 FROM 
     posts
 WHERE 
@@ -17,4 +18,4 @@ WHERE
 GROUP BY 
     user_id
 HAVING 
-    COUNT(*) > 1
+    COUNT(*) > 1;

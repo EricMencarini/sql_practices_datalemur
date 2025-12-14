@@ -19,11 +19,12 @@ Only User 1052 confirmed their sign-up on the second day.
 The dataset you are querying against may have different input & output - this is just an example!
 */
 
-SELECT user_id
+SELECT 
+  user_id
 FROM 
   emails e 
   INNER JOIN texts t 
     ON e.email_id = t.email_id
 WHERE 1=1
   AND t.action_date = e.signup_date + INTERVAL '1 day'
-  AND t.signup_action ='Confirmed'
+  AND t.signup_action ='Confirmed';

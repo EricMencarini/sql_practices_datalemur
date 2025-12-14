@@ -15,12 +15,12 @@ The output shows that Olivia Smith earns $7,000, surpassing her manager, William
 The dataset you are querying against may have different input & output - this is just an example!
 */
 
-SELECT e.employee_id,
-       e.name
+SELECT 
+  e.employee_id,
+  e.name
 FROM 
   employee e 
-  JOIN employee ee 
-    ON e.manager_id = ee.employee_id 
+  JOIN employee ee ON e.manager_id = ee.employee_id 
 WHERE 
-  e.salary > ee.salary
+  e.salary > ee.salary;
   

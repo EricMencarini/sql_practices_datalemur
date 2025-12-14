@@ -24,9 +24,11 @@ SELECT DISTINCT
 FROM 
   trades t 
 JOIN users u ON t.user_id = u.user_id
-  WHERE status = 'Completed'
+
+WHERE 
+  status = 'Completed'
 GROUP BY 
   u.city
 ORDER BY 
   total_orders DESC
-LIMIT 3
+LIMIT 3;

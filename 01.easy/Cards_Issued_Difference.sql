@@ -18,11 +18,12 @@ Chase Sapphire Reserve’s best month was 180k cards issued and the worst month 
 The dataset you are querying against may have different input & output - this is just an example!
 */
 
-SELECT card_name,
-       MAX(issued_amount) - MIN(issued_amount) AS difference
+SELECT 
+    card_name,
+    MAX(issued_amount) - MIN(issued_amount) AS difference
 FROM 
     monthly_cards_issued
 GROUP BY 
     card_name
 ORDER BY 
-    difference DESC
+    difference DESC;

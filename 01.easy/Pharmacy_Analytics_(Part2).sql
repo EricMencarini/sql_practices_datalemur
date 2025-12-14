@@ -30,4 +30,4 @@ WHERE
 GROUP BY
   manufacturer
 ORDER BY
-  Total_Loss DESC
+  Total_Loss DESC;

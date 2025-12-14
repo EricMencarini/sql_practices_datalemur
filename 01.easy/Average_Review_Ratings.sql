@@ -17,12 +17,13 @@ Product 50001 received two ratings of 4 and 3 in the month of June (6th month), 
 The dataset you are querying against may have different input & output - this is just an example!
 */
 
-SELECT EXTRACT(MONTH FROM submit_date) AS mth,
-       product_id,
-       ROUND(AVG(stars),2) AS avg_stars
+SELECT 
+    EXTRACT(MONTH FROM submit_date) AS mth,
+    product_id,
+    ROUND(AVG(stars),2) AS avg_stars
 FROM 
     reviews
 GROUP BY 
     2,1
 ORDER BY 
-    1,2
+    1,2;

@@ -27,4 +27,4 @@ WHERE
 GROUP BY 
     candidate_id
 HAVING 
-    COUNT(candidate_id) > 2
+    COUNT(candidate_id) > 2;

@@ -18,10 +18,11 @@ Zyprexa made the most profit (of $84,576.53) followed by Varicose Relief (of $80
 The dataset you are querying against may have different input & output - this is just an example!
 */
 
-SELECT drug,
-       (total_sales - cogs) AS Total_Profit
+SELECT 
+    drug,
+    (total_sales - cogs) AS Total_Profit
 FROM 
     pharmacy_sales
 ORDER BY 
     Total_Profit DESC
-LIMIT 3
+LIMIT 3;

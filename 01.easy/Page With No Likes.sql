@@ -15,10 +15,12 @@ The dataset you are querying against may have different input & output - this is
 p.s. If you have literally no idea how to solve this, maybe give our free SQL tutorial a try first?
 */
 
-SELECT p.page_id
-FROM pages p 
+SELECT 
+    p.page_id
+FROM 
+    pages p 
     LEFT OUTER JOIN page_likes pp ON p.page_id = pp.page_id 
 WHERE 
     pp.page_id IS NULL
 ORDER BY 
-    p.page_id ASC
+    p.page_id ASC;

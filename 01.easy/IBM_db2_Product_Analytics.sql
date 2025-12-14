@@ -35,7 +35,8 @@ WITH qty_queries AS (
 SELECT 
     unique_queries,
     COUNT(employee_id) AS employee_count
-FROM qty_queries
+FROM 
+  qty_queries
 GROUP BY 
   unique_queries
 ORDER BY 

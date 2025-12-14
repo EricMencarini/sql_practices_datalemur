@@ -18,11 +18,8 @@ The dataset you are querying against may have different input & output - this is
 
 SELECT
   account_id,
-  SUM(CASE 
-        WHEN transaction_type = 'Deposit' 
-          THEN amount ELSE -amount 
-              END) AS balance
+  SUM(CASE WHEN transaction_type = 'Deposit' THEN amount ELSE -amount END) AS balance
 FROM
   transactions
 GROUP BY 
-  account_id
+  account_id;

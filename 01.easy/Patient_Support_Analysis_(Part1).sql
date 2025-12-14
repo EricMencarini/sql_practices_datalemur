@@ -32,4 +32,5 @@ HAVING COUNT
 
 SELECT 
   COUNT(*) AS policy_holder_count
-FROM total_call
+FROM 
+  total_call;
