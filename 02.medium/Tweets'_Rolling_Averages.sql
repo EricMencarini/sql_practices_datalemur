@@ -33,4 +33,4 @@ FROM
 GROUP BY
   user_id,
   tweet_date,
-  tweet_count
+  tweet_count;

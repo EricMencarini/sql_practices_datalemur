@@ -30,17 +30,21 @@ The dataset you are querying against may have different input & output - this is
 
 WITH songs_history AS 
 (
-SELECT user_id,
-       song_id,
-       song_plays
-  FROM songs_history 
+SELECT 
+  user_id,
+  song_id,
+  song_plays
+FROM 
+  songs_history 
 
 UNION ALL 
 
-SELECT sw.user_id,
-       sw.song_id,
-       COUNT(sw.song_id) AS song_plays
-  FROM songs_weekly sw 
+SELECT 
+  sw.user_id,
+  sw.song_id,
+  COUNT(sw.song_id) AS song_plays
+FROM 
+  songs_weekly sw 
 WHERE
   DATE(listen_time) <= '2022-08-04'
 GROUP BY
@@ -51,8 +55,9 @@ SELECT
   user_id,
   song_id,
   SUM(song_plays) AS song_plays
-FROM songs_history
+FROM 
+  songs_history
 GROUP BY  
  1,2
 ORDER BY 
-  song_plays DESC
+  song_plays DESC;

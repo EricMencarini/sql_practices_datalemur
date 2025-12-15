@@ -22,12 +22,15 @@ WITH Rank_Transactions AS
 SELECT user_id,
        transaction_date,
        spend,
-       ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY transaction_date ASC) as Rank
-FROM transactions
+       ROW_NUMBER() OVER(PARTITION BY user_id ORDER BY transaction_date ASC) as rn_rank
+FROM 
+    transactions
 )
 
 SELECT user_id,
        transaction_date,
        spend
-FROM Rank_Transactions
-WHERE Rank = 3
+FROM 
+    Rank_Transactions
+WHERE 
+    rn_rank = 3

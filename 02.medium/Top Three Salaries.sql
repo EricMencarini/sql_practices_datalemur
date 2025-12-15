@@ -28,20 +28,23 @@ The dataset you are querying against may have different input & output - this is
 
 */
 
-WITH employee_salary as (
+WITH employee_salary AS (
 SELECT
       d.department_name,
       e.name,
       e.salary,
-      DENSE_RANK() OVER(PARTITION BY d.department_name ORDER BY e.salary DESC) as r_salary
+      DENSE_RANK() OVER(PARTITION BY d.department_name ORDER BY e.salary DESC) as dense_r_salary
 FROM employee e
-INNER JOIN department d ON e.department_id = d.department_id
-ORDER BY d.department_name ASC, e.salary DESC, e.name
+      INNER JOIN department d ON e.department_id = d.department_id
+ORDER BY 
+      d.department_name ASC, e.salary DESC, e.name
 )
 
 SELECT
       department_name,
       name,
       salary
-FROM employee_salary
-WHERE r_salary < 4
+FROM 
+      employee_salary
+WHERE 
+      dense_r_salary < 4;
