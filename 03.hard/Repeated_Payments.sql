@@ -57,4 +57,4 @@ FROM
 SELECT 
   SUM(calculation) AS payment_count
 FROM 
-  calc_diff_seconds
+  calc_diff_seconds;

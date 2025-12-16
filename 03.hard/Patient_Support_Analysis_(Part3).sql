@@ -42,4 +42,4 @@ SELECT
 FROM 
   seven_days_calc
 WHERE 
-  seven_days_gap = 1
+  seven_days_gap = 1;

@@ -43,4 +43,4 @@ WHERE 1=1
   AND ptt.topping_name < pttt.topping_name
 ORDER BY
   total_cost DESC, 
-  pizza ASC
+  pizza ASC;

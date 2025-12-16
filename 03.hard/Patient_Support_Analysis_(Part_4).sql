@@ -46,4 +46,4 @@ SELECT
     ((current_mth_calls - LAG(current_mth_calls) OVER(PARTITION BY yr ORDER BY mth))  * 100.0 
         / LAG(current_mth_calls) OVER(PARTITION BY yr ORDER BY mth)),1) AS long_calls_growth_pct
 FROM
-  calls_per_mth
+  calls_per_mth;

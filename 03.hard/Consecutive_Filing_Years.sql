@@ -45,4 +45,4 @@ GROUP BY
 HAVING 
   COUNT(user_id) > 2
 ORDER BY 
-  user_id
+  user_id;

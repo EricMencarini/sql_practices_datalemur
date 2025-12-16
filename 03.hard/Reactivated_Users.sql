@@ -69,7 +69,7 @@ GROUP BY
 HAVING 
   SUM(calc_reativation) > 0
 ORDER BY
-  mth
+  mth;
 
 --Solution 2: Considering the table has multiple years;
 WITH calc_last_month_activity AS
@@ -111,4 +111,4 @@ GROUP BY
 HAVING 
   SUM(calc_reativation) > 0
 ORDER BY
-  mth
+  mth;

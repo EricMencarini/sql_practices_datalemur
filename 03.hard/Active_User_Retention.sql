@@ -24,8 +24,10 @@ WITH active_month AS
     SELECT EXTRACT(month FROM event_date) as mth,
            user_id,
            event_id
-    FROM user_actions
-    WHERE EXTRACT(month FROM event_date) = 07
+    FROM 
+      user_actions
+    WHERE 
+      EXTRACT(month FROM event_date) = 07
 ),
     
     previous_month AS 
@@ -33,8 +35,10 @@ WITH active_month AS
     SELECT EXTRACT(month FROM event_date) as mth,
            user_id,
            event_id
-    FROM user_actions
-    WHERE EXTRACT(month FROM event_date) = 06
+    FROM 
+      user_actions
+    WHERE 
+      EXTRACT(month FROM event_date) = 06
 )
 
 SELECT mth, 
@@ -44,4 +48,4 @@ FROM
 WHERE 
   user_id IN (SELECT DISTINCT user_id FROM previous_month)
 GROUP BY 
-  mth
+  mth;

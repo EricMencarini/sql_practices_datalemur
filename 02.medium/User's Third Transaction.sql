@@ -33,4 +33,4 @@ SELECT user_id,
 FROM 
     Rank_Transactions
 WHERE 
-    rn_rank = 3
+    rn_rank = 3;

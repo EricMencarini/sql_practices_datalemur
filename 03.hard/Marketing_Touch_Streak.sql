@@ -44,11 +44,10 @@ SELECT DISTINCT
   contacts.email
 FROM
   consecutive_events_cte AS events
-INNER JOIN crm_contacts AS contacts
-  ON events.contact_id = contacts.contact_id
+  INNER JOIN crm_contacts AS contacts ON events.contact_id = contacts.contact_id
 
 WHERE 1=1
   AND previous_week = event_week - interval '1 week'
   OR  forward_week = event_week  + interval '1 week'
   AND events.contact_id in 
-    (SELECT contact_id FROM marketing_touches WHERE event_type = 'trial_request')
+    (SELECT contact_id FROM marketing_touches WHERE event_type = 'trial_request');

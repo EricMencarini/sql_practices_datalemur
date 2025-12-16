@@ -32,6 +32,6 @@ SELECT user_id,
 
 FROM 
   advertiser a
-FULL OUTER JOIN 
-  daily_pay dp using(user_id)
-ORDER BY user_id
+  FULL OUTER JOIN daily_pay dp using(user_id)
+ORDER BY 
+  user_id;

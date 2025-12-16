@@ -40,4 +40,4 @@ FROM
 SELECT 
   SUM(calc_even_days) AS total_uptime_days
 FROM
-  get_even_days
+  get_even_days;

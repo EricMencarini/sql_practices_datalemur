@@ -42,4 +42,4 @@ SELECT
   ROUND(((curr_year_spend - LAG(curr_year_spend) OVER(PARTITION BY product_id ORDER BY year)) 
   / LAG(curr_year_spend) OVER(PARTITION BY product_id ORDER BY year)) *100.0,2) AS yoy_rate
 FROM
-  current_year
+  current_year;
